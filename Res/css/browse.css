@@ -3,7 +3,8 @@
  */
 
 /* Move down content because we have a fixed navbar that is 50px tall */
-body {
+body
+{
   padding-top: 50px;
 }
 
@@ -93,13 +94,22 @@ body {
   margin-bottom: 30px;
   text-align: center;
 }
-.placeholders h4 {
+.placeholders h4
+{
   margin-bottom: 0;
 }
-.placeholder {
+.placeholder
+{
   margin-bottom: 20px;
 }
-.placeholder img {
+.placeholder img
+{
   display: inline-block;
   border-radius: 50%;
 }
+
+car-footer
+{
+  background-color: red;
+}
+
