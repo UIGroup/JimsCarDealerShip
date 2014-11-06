@@ -49,7 +49,7 @@
       <div class="jumbotron">
         <h1>A Great Honda Experience</h1>
         <p class="lead">The best Honda experience in San Antonio. Where you will find great service and even better prices! We are here to provide you with knowledge and expertise when choosing a ride that suits you.</p>
-        <p><a class="btn btn-lg btn-success" href="Browse.html" role="button">Browse our selection</a></p>
+        <p><a class="btn btn-lg btn-success" href="Browse.php" role="button">Browse our selection</a></p>
       </div>
 
       <div class="row">
@@ -63,7 +63,7 @@
 		<div class="col-lg-6">
           <h2>Let Us Know!</h2>
           <p>Did you have a positive experience at Jim's Car Dealership? A bad experience?  We want to know about it!  Click on the button below to tell us about your experience at Jim's Car Dealership and/or anything you think we could do to make others' visit one they will remember.</p>
-          <p><a class="btn btn-success" href="DealerReview.html" role="button">Tell us about your experience</a></p>
+          <p><a class="btn btn-success" href="DealerReview.php" role="button">Tell us about your experience</a></p>
        </div>
 	   
         <div class="col-lg-6">
