@@ -14,6 +14,7 @@ function submitNewCar()
     var NewAlarm = document.getElementById("NewAlarm");
     
     
+    
     var NewModel = NewSub.options[NewModel.selectedIndex].value;
     var NewSubString = NewSub.options[NewSub.selectedIndex].value;
     var NewColorString = NewColor.options[NewColor.selectedIndex].value;
@@ -29,7 +30,7 @@ function submitNewCar()
     
     
     
-    /*if (NewSmartReadyString)
+    if (NewSmartReadyString)
     {
         NewSmartReadyString = "Yes";
     }
@@ -54,8 +55,8 @@ function submitNewCar()
     else
     {
         NewAlarmString = "No";
-    }*/
+    }
     
     
-    alert(NewKeylessString);
+    alert(NewAlarmString);
 }

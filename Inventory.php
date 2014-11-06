@@ -197,7 +197,7 @@
                     <input type="checkbox" id="NewGPS"> GPS
                   </label>
                 </div>
-                <div class="checkbox col-md-1 col-md-offset-1" id="NewKeyless">
+                <div class="checkbox col-md-1 col-md-offset-1">
                   <label>
                     <input type="checkbox" id="NewKeyless"> Keyless
                   </label>
