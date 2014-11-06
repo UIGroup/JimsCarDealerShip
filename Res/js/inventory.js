@@ -1,4 +1,4 @@
-var NewModelString;
+var ImageString;
 function submitNewCar()
 {
     var NewModel = document.getElementById("NewModel");
@@ -19,7 +19,7 @@ function submitNewCar()
     
     
     
-    var NewModel = NewSub.options[NewModel.selectedIndex].value;
+    var NewModelString = NewSub.options[NewModel.selectedIndex].value;
     var NewSubString = NewSub.options[NewSub.selectedIndex].value;
     var NewColorString = NewColor.options[NewColor.selectedIndex].value;
     var NewInteriorString = NewInterior.options[NewInterior.selectedIndex].value;
@@ -66,7 +66,22 @@ function submitNewCar()
     }
     
     
-    console.log("%s",NewModelString);
+    var formData =
+    {
+        modal:NewModelString,
+        sub:NewSubString,
+        pic: ImageString,
+    };
+    $.ajax(
+    {
+        url:"./Scripts/NewCar.php",
+        type: "POST",
+        data : formData,
+        success:function(result)
+        {
+            alert(result);
+        }
+    });
 }
 
 function readImage(input)
@@ -76,7 +91,7 @@ function readImage(input)
         var FR = new FileReader();
         FR.onload = function(e)
         {
-             NewModelString = e.target.result;
+             ImageString = e.target.result;
         };       
         FR.readAsDataURL( input.files[0] );
     }
