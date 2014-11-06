@@ -13,6 +13,7 @@
     <!-- Javascript --> 
     <script src="./Res/js/jquery.js"></script>
     <script src="./Res/js/bootstrap.js"></script>
+    <script src="./Res/js/index.js"></script>
     
     
   </head>
@@ -32,16 +33,16 @@
           <a class="navbar-brand" href="#">Jim's Car Dealership</a>
         </div>
         <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right" role="form">
+          <div class="navbar-form navbar-right" role="form" id="loginArea">
             <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
+              <input type="text" placeholder="Email" class="form-control" id="email">
             </div>
             <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
+              <input type="password" placeholder="Password" class="form-control" id="password">
             </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-			<button type="submit" class="btn btn-success" style="background-color:blue">Create an Account</button>
-          </form>
+            <button class="btn btn-success" onclick="signIn()">Sign in</button>
+	    <button class="btn btn-info" data-toggle="modal" data-target="#NewUser">Create an Account</button>
+          </div>
         </div><!--/.navbar-collapse -->
       </div>
 
@@ -80,5 +81,53 @@
       </div>
 
     </div> <!-- /container -->
+    
+    
+    <!-- New User Modal -->
+      <div class="modal fade" id="NewUser">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	      <h4 class="modal-title">New User</h4>
+	    </div>
+	    <div class="modal-body">
+	      
+	      
+	      
+	      <div class="row">
+		<input type="text" class="col-md-2 col-md-offset-4" placeholder="Last Name">
+		<input type="text" class="col-md-2 col-md-offset-1" placeholder="First Name">
+	      </div>
+	      <div class="row">
+		<input type="text" class="col-md-2 col-md-offset-4" placeholder="Email">
+		<input type="text" class="col-md-2 col-md-offset-1" placeholder="Phone">
+	      </div>
+	      <br>
+	      <div class="row">
+		<input type="password" class="col-md-3 col-md-offset-5" placeholder="Password">
+	      </div>
+	      <div class="row">
+		<div class="checkbox col-md-1 col-md-offset-4">
+                  <label>
+                    <input type="checkbox" id="NewSmartReady"> Employee
+                  </label>
+                </div>
+		<input type="password" class="col-md-4 col-md-offset-1" placeholder="Employees Only">
+	      </div>
+	      
+	      
+	    </div>
+	    <div class="modal-footer">
+	      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="NewUserSubmit()">Submit</button>
+	    </div>
+	  </div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+    
+    
+    
+    
   </body>
 </html>
