@@ -1,3 +1,7 @@
+<?php
+  include("./Scripts/Models/Database.php");
+  $db = new Database();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -28,13 +32,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Inventory Management</a>
+          <a class="navbar-brand" href="#">Home</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#" data-toggle="modal" data-target="#NewCarModal">New Vehicle</a></li>
             <li><a href="#">Reservations</a></li>
-            <li><a href="#">Sign Out</a></li>
+            <li><a href="index.php">Sign Out</a></li>
           </ul>
         </div>
       </div>
@@ -54,31 +58,32 @@
                   <th>Year</th>
                   <th>Transmission</th>
                   <th>VIN</th>
-                  <th>View</th>
+                  <th></th>
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
-                </tr>
-                <tr>
-                  <td>1,014</td>
-                  <td>per</td>
-                  <td>inceptos</td>
-                  <td>himenaeos</td>
-                  <td>Curabitur</td>
-                </tr>
-                <tr>
-                  <td>1,015</td>
-                  <td>sodales</td>
-                  <td>ligula</td>
-                  <td>in</td>
-                  <td>libero</td>
-                </tr>
+                <?php
+                  $query = "SELECT * from JimsCarDealerShip.inventory";
+                  $reply = $db -> query($query);
+                  
+                  $count = 0;
+                  while($row = mysql_fetch_array($reply,MYSQLI_ASSOC))
+                  {
+                    $id = $row['id'];
+                    $model = $row['model'];
+                    $sub = $row['sub_model'];
+                    $color = $row['color'];
+                    $year = $row['year'];
+                    $trans = $row['transmission'];
+                    $vin = $row['vin'];
+                    
+                    print "<tr>";
+                    print "<td>$id</td><td>$model</td><td>$sub</td><td>$color</td><td>$year</td><td>$trans</td><td>$vin</td>";
+                    print "<td><button type=\"submit\" class=\"btn btn-success\" onclick=\"viewCar($id)\">View</button></td>";
+                    print "</tr>";
+                    $count++;
+                  } 
+                ?>
               </tbody>
             </table>
           </div>
@@ -143,6 +148,7 @@
                 <select class="col-md-2 col-md-offset-0" id="NewColor">
                   <option value="Red">Red</option>
                   <option value="Blue">Blue</option>
+                  <option value="Black">Black</option>
                   <option value="Maroon">Maroon</option>
                   <option value="Green">Green</option>
                   <option value="Yellow">Yellow</option>
@@ -216,7 +222,7 @@
             </div>
         </div>
           <div class="container-fluid" style="margin: 10px;">
-            <button type="button" class="btn btn-default col-md-2 col-md-offset-6" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-default col-md-2 col-md-offset-6" data-dismiss="modal" id="NewCancel">Cancel</button>
             <button type="button" class="btn btn-primary col-md-3 col-md-offset-1" onclick="submitNewCar()">Submit</button>
           </div>
         </div><!-- /.modal-content -->
