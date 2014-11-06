@@ -38,9 +38,9 @@
             return mysql_error($this -> link);
         }
         public function getLastID()
-		  {
-				$result = mysql_insert_id();
-		  		return $result;
-		  }
-	}
+        {
+            $result = mysql_insert_id();
+            return $result;
+        }
+    }
 ?>
