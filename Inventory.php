@@ -151,6 +151,7 @@
                   <option value="Silver">Silver</option>
                 </select>
               </div>
+              <br>
               <div class="row">
                 <label class="col-md-2 col-md-offset-0">
                   Interior:
@@ -160,13 +161,65 @@
                   <option value="Black">Black</option>
                   <option value="Leather">Leather</option>
                 </select>
-                <input type="text" class="col-md-2 col-md-offset-1" placeholder="MPG">
+                <input type="number" class="col-md-2 col-md-offset-1" placeholder="MPG">
+                  <label class="col-md-2 col-md-offset-0">
+                  Trans:
+                </label>
+                <select class="col-md-2 col-md-offset-0">
+                  <option value="AutoMatic">Automatic</option>
+                  <option value="Standard">Standard</option>
+                </select>
               </div>
-              
-              
-              
+              <br>
+              <div class="row">
+                <label class="col-md-2 col-md-offset-0">
+                  Body:
+                </label>
+                <select class="col-md-2 col-md-offset-0">
+                  <option value="Coup">Coup</option>
+                  <option value="Sedan">Sedan</option>
+                  <option value="Truck">Truck</option>
+                  <option value="Hatchback">Hatchback</option>
+                  <option value="Van">Van</option>
+                  <option value="SUV">SUV</option>
+                </select>
+                <div class="checkbox col-md-1 col-md-offset-0">
+                  <label>
+                    <input type="checkbox"> SmartReady
+                  </label>
+                </div>
+                <input type="number" class="col-md-4 col-md-offset-2" placeholder="Number of Cupholders">
+              </div>
+              <br>
+              <div class="row">
+                <div class="checkbox col-md-1 col-md-offset-2">
+                  <label>
+                    <input type="checkbox"> GPS
+                  </label>
+                </div>
+                <div class="checkbox col-md-1 col-md-offset-1">
+                  <label>
+                    <input type="checkbox"> Keyless
+                  </label>
+                </div>
+                <div class="checkbox col-md-1 col-md-offset-1">
+                  <label>
+                    <input type="checkbox"> Keyless
+                  </label>
+                </div>
+                <div class="checkbox col-md-1 col-md-offset-1">
+                  <label>
+                    <input type="checkbox"> Alarm
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <input type="number" class="col-md-2 col-md-offset-1" placeholder="Year">
+                <input type="text" class="col-md-4 col-md-offset-1" placeholder="Vehicle Identification Number">
+                <input type="file" class="col-md-2 col-md-offset-" name="pic" accept="image/*">
+              </div>
             </div>
-          </div>
+        </div>
           <div class="container-fluid" style="margin: 10px;">
             <button type="button" class="btn btn-default col-md-2 col-md-offset-6" data-dismiss="modal">Cancel</button>
             <button type="button" class="btn btn-primary col-md-3 col-md-offset-1" onclick="submitNewCar()">Submit</button>
