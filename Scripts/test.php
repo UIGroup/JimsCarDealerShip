@@ -1,3 +1,7 @@
 <?php
-	print "It Worked!";
+	include('./Models/Database.php');
+	
+	$db = new Database();
+	
+	$db.printStatus();
 ?>
