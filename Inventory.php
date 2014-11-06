@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Dashboard Template for Bootstrap</title>
+    <title>Jims Car Dealership</title>
 
     <!-- CSS -->
     <link href="./Res/css/bootstrap.min.css" rel="stylesheet">
