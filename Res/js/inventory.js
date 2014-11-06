@@ -1,3 +1,4 @@
+var NewModelString;
 function submitNewCar()
 {
     var NewModel = document.getElementById("NewModel");
@@ -12,6 +13,9 @@ function submitNewCar()
     var NewGPS = document.getElementById("NewGPS");
     var NewKeyless = document.getElementById("NewKeyless");
     var NewAlarm = document.getElementById("NewAlarm");
+    var NewYear = document.getElementById("NewYear");
+    var NewVIN = document.getElementById("NewVIN");
+    var NewPic = document.getElementById("NewPic");
     
     
     
@@ -27,6 +31,10 @@ function submitNewCar()
     var NewCupString = NewCup.value;
     var NewKeylessString = NewKeyless.checked;
     var NewAlarmString = NewAlarm.checked;
+    var NewYearString = NewYear.value;
+    var NewVINString = NewVIN.value;
+    
+    
     
     
     
@@ -58,5 +66,23 @@ function submitNewCar()
     }
     
     
-    alert(NewAlarmString);
+    console.log("%s",NewModelString);
 }
+
+function readImage(input)
+{
+    if ( input.files && input.files[0] )
+    {
+        var FR = new FileReader();
+        FR.onload = function(e)
+        {
+             NewModelString = e.target.result;
+        };       
+        FR.readAsDataURL( input.files[0] );
+    }
+}
+
+$("#NewPic").change(function()
+{
+    readImage(this);
+});

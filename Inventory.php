@@ -209,9 +209,9 @@
                 </div>
               </div>
               <div class="row">
-                <input type="number" class="col-md-2 col-md-offset-1" placeholder="Year">
-                <input type="text" class="col-md-4 col-md-offset-1" placeholder="Vehicle Identification Number">
-                <input type="file" class="col-md-2 col-md-offset-" name="pic" accept="image/*">
+                <input type="number" class="col-md-2 col-md-offset-1" placeholder="Year" id="NewYear">
+                <input type="text" class="col-md-4 col-md-offset-1" placeholder="Vehicle Identification Number" id="NewVIN">
+                <input type="file" class="col-md-2 col-md-offset-" name="pic" accept="image/*" id="NewPic">
               </div>
             </div>
         </div>
