@@ -1,4 +1,5 @@
 var ImageString;
+var reply;
 function submitNewCar()
 {
     var NewModel = document.getElementById("NewModel");
@@ -19,7 +20,7 @@ function submitNewCar()
     
     
     
-    var NewModelString = NewSub.options[NewModel.selectedIndex].value;
+    var NewModelString = NewModel.options[NewModel.selectedIndex].value;
     var NewSubString = NewSub.options[NewSub.selectedIndex].value;
     var NewColorString = NewColor.options[NewColor.selectedIndex].value;
     var NewInteriorString = NewInterior.options[NewInterior.selectedIndex].value;
@@ -64,12 +65,30 @@ function submitNewCar()
     {
         NewAlarmString = "No";
     }
-    
-    
+    if(NewGPSString)
+    {
+        NewGPSString = "Yes";
+    }
+    else
+    {
+        NewGPSString = "No";
+    }
     var formData =
     {
-        modal:NewModelString,
+        model:NewModelString,
         sub:NewSubString,
+        color:NewColorString,
+        interior:NewInteriorString,
+        MPG:NewMPGString,
+        trans:NewTransString,
+        body:NewBodyString,
+        GPS:NewGPSString,
+        smartready:NewSmartReadyString,
+        cup:NewCupString,
+        keyless:NewKeylessString,
+        alarm:NewAlarmString,
+        year:NewYearString,
+        VIN:NewVINString,
         pic: ImageString,
     };
     $.ajax(
@@ -77,10 +96,21 @@ function submitNewCar()
         url:"./Scripts/NewCar.php",
         type: "POST",
         data : formData,
+        
         success:function(result)
         {
-            alert(result);
+            reply = JSON.parse(result);
+            if (reply.status == "Successful")
+            {
+                alert("New car submitted");
+                NewVIN.value = "";
+            }
+            else
+            {
+                alert("New car submittion failed");
+            }
         }
+        
     });
 }
 
