@@ -87,28 +87,6 @@
     </div>
     
     
-    <!-- Modals
-    ================================================== -->
-    <!--  -->
-    <div class="modal fade">
-        <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title">Modal title</h4>
-              </div>
-              <div class="modal-body">
-                <p>One fine body&hellip;</p>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-    
-    
     
     <!-- New Car Modal -->
     <div class="modal fade" id="NewCarModal">
@@ -116,7 +94,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title">Modal title</h4>
+            <h4 class="modal-title">N</h4>
           </div>
             <div class="container-fluid" style="margin: 10px;">
               
@@ -159,6 +137,30 @@
                   <option value="RTS">RTS</option>
                   <option value="RTL">RTL</option>
                 </select>
+                <label class="col-md-2 col-md-offset-0">
+                  Color:
+                </label>
+                <select class="col-md-2 col-md-offset-0">
+                  <option value="Red">Red</option>
+                  <option value="Blue">Blue</option>
+                  <option value="Maroon">Maroon</option>
+                  <option value="Green">Green</option>
+                  <option value="Yellow">Yellow</option>
+                  <option value="White">White</option>
+                  <option value="Grey">Grey</option>
+                  <option value="Silver">Silver</option>
+                </select>
+              </div>
+              <div class="row">
+                <label class="col-md-2 col-md-offset-0">
+                  Interior:
+                </label>
+                <select class="col-md-2 col-md-offset-0">
+                  <option value="White">White</option>
+                  <option value="Black">Black</option>
+                  <option value="Leather">Leather</option>
+                </select>
+                <input type="text" class="col-md-2 col-md-offset-1" placeholder="MPG">
               </div>
               
               
@@ -167,7 +169,7 @@
           </div>
           <div class="container-fluid" style="margin: 10px;">
             <button type="button" class="btn btn-default col-md-2 col-md-offset-6" data-dismiss="modal">Cancel</button>
-            <button type="button" class="btn btn-primary col-md-3 col-md-offset-1" onclick="submitNewCar()">Save changes</button>
+            <button type="button" class="btn btn-primary col-md-3 col-md-offset-1" onclick="submitNewCar()">Submit</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
