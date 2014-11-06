@@ -103,7 +103,7 @@
                 <label class="col-md-1 col-md-offset-0">
                   Model:
                 </label>
-                <select class="col-md-2 col-md-offset-1">
+                <select class="col-md-2 col-md-offset-1" id="NewModel">
                   <option value="Accord">Accord</option>
                   <option value="Civic">Civic</option>
                   <option value="Crosstour">Crosstour</option>
@@ -118,7 +118,7 @@
                 <label class="col-md-1 col-md-offset-0">
                   Sub:
                 </label>
-                <select class="col-md-2 col-md-offset-0">
+                <select class="col-md-2 col-md-offset-0" id="NewSub">
                   <option value="Hybrid">Hybrid</option>
                   <option value="Plugin">Plug-in</option>
                   <option value="EX">EX</option>
@@ -140,7 +140,7 @@
                 <label class="col-md-2 col-md-offset-0">
                   Color:
                 </label>
-                <select class="col-md-2 col-md-offset-0">
+                <select class="col-md-2 col-md-offset-0" id="NewColor">
                   <option value="Red">Red</option>
                   <option value="Blue">Blue</option>
                   <option value="Maroon">Maroon</option>
@@ -156,17 +156,17 @@
                 <label class="col-md-2 col-md-offset-0">
                   Interior:
                 </label>
-                <select class="col-md-2 col-md-offset-0">
+                <select class="col-md-2 col-md-offset-0" id="NewInterior">
                   <option value="White">White</option>
                   <option value="Black">Black</option>
                   <option value="Leather">Leather</option>
                 </select>
-                <input type="number" class="col-md-2 col-md-offset-1" placeholder="MPG">
+                <input type="number" class="col-md-2 col-md-offset-1" placeholder="MPG" id="NewMPG">
                   <label class="col-md-2 col-md-offset-0">
                   Trans:
                 </label>
-                <select class="col-md-2 col-md-offset-0">
-                  <option value="AutoMatic">Automatic</option>
+                <select class="col-md-2 col-md-offset-0" id="NewTrans">
+                  <option value="Automatic">Automatic</option>
                   <option value="Standard">Standard</option>
                 </select>
               </div>
@@ -175,7 +175,7 @@
                 <label class="col-md-2 col-md-offset-0">
                   Body:
                 </label>
-                <select class="col-md-2 col-md-offset-0">
+                <select class="col-md-2 col-md-offset-0" id="NewBody">
                   <option value="Coup">Coup</option>
                   <option value="Sedan">Sedan</option>
                   <option value="Truck">Truck</option>
@@ -185,31 +185,26 @@
                 </select>
                 <div class="checkbox col-md-1 col-md-offset-0">
                   <label>
-                    <input type="checkbox"> SmartReady
+                    <input type="checkbox" id="NewSmartReady"> SmartReady
                   </label>
                 </div>
-                <input type="number" class="col-md-4 col-md-offset-2" placeholder="Number of Cupholders">
+                <input type="number" class="col-md-4 col-md-offset-2" placeholder="Number of Cupholders" id="NewCup">
               </div>
               <br>
               <div class="row">
                 <div class="checkbox col-md-1 col-md-offset-2">
                   <label>
-                    <input type="checkbox"> GPS
+                    <input type="checkbox" id="NewGPS"> GPS
+                  </label>
+                </div>
+                <div class="checkbox col-md-1 col-md-offset-1" id="NewKeyless">
+                  <label>
+                    <input type="checkbox" id="NewKeyless"> Keyless
                   </label>
                 </div>
                 <div class="checkbox col-md-1 col-md-offset-1">
                   <label>
-                    <input type="checkbox"> Keyless
-                  </label>
-                </div>
-                <div class="checkbox col-md-1 col-md-offset-1">
-                  <label>
-                    <input type="checkbox"> Keyless
-                  </label>
-                </div>
-                <div class="checkbox col-md-1 col-md-offset-1">
-                  <label>
-                    <input type="checkbox"> Alarm
+                    <input type="checkbox" id="NewAlarm"> Alarm
                   </label>
                 </div>
               </div>
