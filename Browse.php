@@ -1,3 +1,7 @@
+<?php
+  include("./Scripts/Models/Database.php");
+  $db = new Database();
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -78,6 +82,42 @@
           
           <!-- Car List -->
           <div id="CarList">
+          
+                <?php
+                  $query = "SELECT * from JimsCarDealerShip.inventory";
+                  $reply = $db -> query($query);
+                  
+                  $count = 0;
+                  while($row = mysql_fetch_array($reply,MYSQLI_ASSOC))
+                  {
+                    $id = $row['id'];
+                    $model = $row['model'];
+                    $sub = $row['sub_model'];
+                    $color = $row['color'];
+                    $year = $row['year'];
+                    $trans = $row['transmission'];
+                    $vin = $row['vin'];
+                    
+                  
+                    print "<tr>";
+                    print "<td>$id</td><td>$model</td><td>$sub</td><td>$color</td><td>$year</td><td>$trans</td><td>$vin</td>";
+                    print "<td><button type=\"submit\" class=\"btn btn-success\" onclick=\"viewCar($id)\">View</button></td>";
+                    print "</tr>";
+                    $count++;
+                    
+                    
+                    
+                    
+                    
+                    
+                    print "<div class=\"panel panel-default\">";
+                      print "<div class=\"panel-heading clearfix\">";
+                        print "<h3 class=\"panel-title pull-left\">"
+                  } 
+                ?>
+            
+            
+            
               <div class="panel panel-default">
                 <div class="panel-heading clearfix">
                   <h3 class="panel-title pull-left">
