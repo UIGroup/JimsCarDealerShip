@@ -104,7 +104,7 @@
                         <label>MPG:</label> $MPG<br>
                       </div>
                       <div>
-                        <a class=\"btn btn-success pull-right\">
+                        <a class=\"btn btn-success pull-right\" data-toggle=\"modal\" data-target=\"#ReserveModal\">
                         <i class=\"fa fa-check\"></i>
                         Reserve a test drive
                         </a>
@@ -151,5 +151,63 @@
         </div>
       </div>
     </div>
+      
+      
+      <!-- Schedule -->
+      <div class="modal fade" id="ReserveModal">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	      <h4 class="modal-title">Schedule a Test Drive</h4>
+	    </div>
+	    <div class="modal-body">
+	      <div class="row">
+		<label class="col-md-1 col-md-offset-0">
+		  Day:
+		</label>
+		<select id="day" class="col-md-1 col-md-offset-0">
+		  <?php
+		    for($x = 1; $x<32;$x++)
+		    {
+		      print "<option value=\"$x\">$x</option>";
+		    }
+		  ?>
+		</select>
+		<label class="col-md-2 col-md-offset-0">
+		  Month:
+		</label>
+		<select id="month">
+		  <option value="January">January</option>
+		  <option value="Feburary">Feburary</option>
+		  <option value="March">March</option>
+		  <option value="April">April</option>
+		  <option value="May">May</option>
+		  <option value="June">June</option>
+		  <option value="July">July</option>
+		  <option value="August">August</option>
+		  <option value="October">October</option>
+		  <option value="November">November</option>
+		  <option value="December">December</option>
+		</select>
+	      
+	      </div>
+	      <div class="row">
+		Notes: <textarea id="notes" style="max-height: 80px;min-height: 80px;max-width: 520px;min-width: 520px;"></textarea>
+	      </div>
+	      
+	      
+	      
+	    </div>
+	    <div class="modal-footer">
+	      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="reserve()">Submit</button>
+	    </div>
+	  </div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+      
+      
+      
   </body>
 </html>
