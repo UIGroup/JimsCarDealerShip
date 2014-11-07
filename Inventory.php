@@ -238,10 +238,10 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./Res/js/inventory.js"></script>
     <script src="./Res/js/jquery.js"></script>
     <script src="./Res/js/bootstrap.min.js"></script>
     <script src="./Res/js/docs.min.js"></script>
+    <script src="./Res/js/inventory.js"></script>
   
   </body>
 </html>

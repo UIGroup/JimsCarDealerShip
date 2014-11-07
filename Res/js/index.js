@@ -1,4 +1,10 @@
-var oldHTML;
+var isLoggedIn = false;
+
+window.onload = function()
+{
+    jQuery('#datetimepicker').datetimepicker();
+};
+
 function NewUserSubmit()
 {
     alert("Congradulations on creating a account");
@@ -8,9 +14,8 @@ function signIn()
     var email = document.getElementById("email").value;
     if (email == "student@my.utsa.edu")
     {
-        oldHTML = $('#loginArea').html;
         $('#loginArea').html('<label>Welcome Adam!</label><button type="button" class="btn btn-danger" onclick="logout()">Logout</button>');
-        
+        isLoggedIn = true;
     }
     else if (email == "jim@jims.com")
     {
@@ -23,5 +28,22 @@ function signIn()
 }
 function logout()
 {
-   $('#loginArea').html(oldHTML);
+   window.location.replace('index.php');
+}
+function reserve()
+{
+    var dayEle = document.getElementById("day");
+    var monthEle = document.getElementById("month");
+    
+    var day = dayEle.options[dayEle.selectedIndex].value;
+    var month = monthEle.options[monthEle.selectedIndex].value;
+    
+    if (isLoggedIn)
+    {
+        alert("Adam is scheduled for "+month+" "+ day);
+    }
+    else
+    {
+        alert("You must be logged in to schedule a visit");
+    }
 }

@@ -12,6 +12,7 @@
         
     <!-- Javascript --> 
     <script src="./Res/js/jquery.js"></script>
+    <script src="./Res/js/jquery.datetimepicker.js"></script>
     <script src="./Res/js/bootstrap.js"></script>
     <script src="./Res/js/index.js"></script>
     
@@ -55,13 +56,13 @@
 
       <div class="row">
         
-        <div class="col-lg-6">
+        <!--<div class="col-lg-6">
           <h2>People Love Us!</h2>
           <p>Here at Jim's Car Dealership we value the opinions of every one of our customers. We love to improve our customer's experience by letting our customers voice there opinions whether good or bad.</p>
           <p><a class="btn btn-success" href="#" role="button">See what people are saying</a></p>
-        </div>
+        </div>-->
         
-		<div class="col-lg-6">
+	<div class="col-lg-6">
           <h2>Let Us Know!</h2>
           <p>Did you have a positive experience at Jim's Car Dealership? A bad experience?  We want to know about it!  Click on the button below to tell us about your experience at Jim's Car Dealership and/or anything you think we could do to make others' visit one they will remember.</p>
           <p><a class="btn btn-success" href="DealerReview.php" role="button">Tell us about your experience</a></p>
@@ -70,7 +71,7 @@
         <div class="col-lg-6">
           <h2>Come Visit Us!</h2>
           <p>When it's all said and done your web browser just doesn't cut it. Come sit behind the wheel of the car of your dreams. One of our sales reps will walk you though our diverse selection of Honda vehicles. Trust me when you sit in a Honda, you wont want to get out!</p>
-          <p><a class="btn btn-success" href="#" role="button">Schedule a visit</a></p>
+          <p><a class="btn btn-success" href="#" role="button" data-toggle="modal" data-target="#Visit">Schedule a visit</a></p>
        </div>
         
       </div>
@@ -126,7 +127,59 @@
 	</div><!-- /.modal-dialog -->
       </div><!-- /.modal -->
     
-    
+    <!-- Schedule -->
+      <div class="modal fade" id="Visit">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+	      <h4 class="modal-title">Schedule a Visit</h4>
+	    </div>
+	    <div class="modal-body">
+	      <div class="row">
+		<label class="col-md-1 col-md-offset-0">
+		  Day:
+		</label>
+		<select id="day" class="col-md-1 col-md-offset-0">
+		  <?php
+		    for($x = 1; $x<32;$x++)
+		    {
+		      print "<option value=\"$x\">$x</option>";
+		    }
+		  ?>
+		</select>
+		<label class="col-md-2 col-md-offset-0">
+		  Month:
+		</label>
+		<select id="month">
+		  <option value="January">January</option>
+		  <option value="Feburary">Feburary</option>
+		  <option value="March">March</option>
+		  <option value="April">April</option>
+		  <option value="May">May</option>
+		  <option value="June">June</option>
+		  <option value="July">July</option>
+		  <option value="August">August</option>
+		  <option value="October">October</option>
+		  <option value="November">November</option>
+		  <option value="December">December</option>
+		</select>
+	      
+	      </div>
+	      <div class="row">
+		Notes: <textarea id="notes" style="max-height: 80px;min-height: 80px;max-width: 520px;min-width: 520px;"></textarea>
+	      </div>
+	      
+	      
+	      
+	    </div>
+	    <div class="modal-footer">
+	      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="reserve()">Submit</button>
+	    </div>
+	  </div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
     
     
   </body>
