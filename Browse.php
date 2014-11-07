@@ -12,7 +12,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>Browse Cars</title>
 
     <!-- CSS -->
     <link href="./Res/css/bootstrap.min.css" rel="stylesheet">
@@ -24,6 +24,7 @@
     <script src="./Res/js/jquery.js"></script>
     <script src="./Res/js/bootstrap.js"></script>
     <script src="./Res/js/docs.min.js"></script>
+    <script src="./Res/js/Browse.js"></script>
     <script src="./Res/js/bootcards.js"></script>
     
   </head>
@@ -43,10 +44,6 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Settings</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Help</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
@@ -58,24 +55,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview</a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item</a></li>
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-            <li><a href="">More navigation</a></li>
-          </ul>
-          <ul class="nav nav-sidebar">
-            <li><a href="">Nav item again</a></li>
-            <li><a href="">One more nav</a></li>
-            <li><a href="">Another nav item</a></li>
-          </ul>
+          
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main bootcards-cards">
           <!--<h2 class="page-header">Our Selection</h2>-->
@@ -105,7 +85,7 @@
                       
                       print "
                       
-                      <div class=\"panel panel-default\">
+                      <div class=\"panel panel-default\" id=\"$id\">
                 <div class=\"panel-heading clearfix\">
                   <h3 class=\"panel-title pull-left\">
                     Honda $model
@@ -136,7 +116,7 @@
                         </a>
                         <br>
                         <br>
-                        <a class=\"btn btn-danger pull-right\" href=\"#\">
+                        <a class=\"btn btn-danger pull-right\" onclick=\"takeOff($id)\">
                         <i class=\"fa fa-check\"></i>
                         Remove from list
                         </a>
