@@ -97,66 +97,67 @@
                     $year = $row['year'];
                     $trans = $row['transmission'];
                     $vin = $row['vin'];
-                    
-                  
-                    print "<tr>";
-                    print "<td>$id</td><td>$model</td><td>$sub</td><td>$color</td><td>$year</td><td>$trans</td><td>$vin</td>";
-                    print "<td><button type=\"submit\" class=\"btn btn-success\" onclick=\"viewCar($id)\">View</button></td>";
-                    print "</tr>";
-                    $count++;
-                    
-                    
-                    
-                    
-                    
-                    
-                    print "<div class=\"panel panel-default\">";
-                      print "<div class=\"panel-heading clearfix\">";
-                        print "<h3 class=\"panel-title pull-left\">"
-                  } 
-                ?>
-            
-            
-            
-              <div class="panel panel-default">
-                <div class="panel-heading clearfix">
-                  <h3 class="panel-title pull-left">
-                    Honda Civic
+                    $img = $row['img'];
+                    $interior = $row['interior'];
+                    $MPG = $row['mpg'];
+                    $body = $row['body'];
+       
+                      
+                      print "
+                      
+                      <div class=\"panel panel-default\">
+                <div class=\"panel-heading clearfix\">
+                  <h3 class=\"panel-title pull-left\">
+                    Honda $model
                   </h3>
                 </div>
-                <div class="panel-body">
+                <div class=\"panel-body\">
                   <p>
-                    <div class="row-fluid">
-                      <div class="col-md-4">
-                        <img src="./CarImages/Civic2014.jpg" style="max-height: 14em; max-width: 22em;">
+                    <div class=\"row-fluid\">
+                      <div class=\"col-md-4\">
+                        <img src=\"$img\" style=\"max-height: 14em; max-width: 22em;\">
                       </div>
-                      <div class="col-md-4 col-md-offset-1" style="font-size: 1.5em;">
-                        <label>Color:</label> White<br>
-                        <label>Body:</label> Sedan<br>
-                        <label>Interior:</label> Tan<br>
-                        <label>Mileage:</label> 53<br>
+                      <div class=\"col-md-4 col-md-offset-1\" style=\"font-size: 1.5em;\">
+                        <label>Color:</label> $color<br>
+                        <label>Body:</label> $body<br>
+                        <label>Interior:</label> $interior<br>
+                        <label>MPG:</label> $MPG<br>
                       </div>
                       <div>
-                        <a class="btn btn-success pull-right" href="#">
-                        <i class="fa fa-check"></i>
+                        <a class=\"btn btn-success pull-right\">
+                        <i class=\"fa fa-check\"></i>
                         Reserve a test drive
                         </a>
                         <br>
                         <br>
-						<a class="btn btn-success pull-right" href="#">
-                        <i class="fa fa-check"></i>
+						<a class=\"btn btn-success pull-right\" href=\"#\">
+                        <i class=\"fa fa-check\"></i>
                         View Details
                         </a>
                         <br>
                         <br>
-                        <a class="btn btn-danger pull-right" href="#">
-                        <i class="fa fa-check"></i>
+                        <a class=\"btn btn-danger pull-right\" href=\"#\">
+                        <i class=\"fa fa-check\"></i>
                         Remove from list
                         </a>
                       </div>
                     </div>
                   </p>
                 </div>
+                <!--<div class=\"panel-footer\" style=\"height: 4em;\">
+                  
+                  <a class=\"btn btn-success pull-right\" href=\"#\">
+                  <i class=\"fa fa-check\"></i>
+                    Reserve a test drive
+                  </a>
+                </div>-->
+              </div>
+                      
+                      ";
+                  } 
+                ?>
+            
+  
                 <!--<div class="panel-footer" style="height: 4em;">
                   
                   <a class="btn btn-success pull-right" href="#">
@@ -164,8 +165,6 @@
                     Reserve a test drive
                   </a>
                 </div>-->
-              </div>
-          </div>
           
           
           
