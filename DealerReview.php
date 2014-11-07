@@ -12,6 +12,7 @@
     <!-- Javascript --> 
     <script src="./Res/js/jquery.js"></script>
     <script src="./Res/js/bootstrap.js"></script>
+    <script src="./Res/js/DealerReview.js"></script>
     
     
   </head>
@@ -46,7 +47,7 @@
               <input type="text" placeholder="Name or anonymous" class="form-control">
             </div>
           </form>
-        <p><a class="btn btn-lg btn-success" href="index.html" role="button">Submit</a></p>
+        <p><a class="btn btn-lg btn-success" role="button" onclick="reviewSubmit()">Submit</a></p>
       </div>
 
       <!-- Site footer -->
