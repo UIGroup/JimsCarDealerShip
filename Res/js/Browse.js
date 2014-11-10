@@ -10,5 +10,5 @@ function reserve()
     var day = dayEle.options[dayEle.selectedIndex].value;
     var month = monthEle.options[monthEle.selectedIndex].value;
     
-    alert("You is scheduled for a test drive on "+month+" "+ day);
+    alert("You are scheduled for a test drive on "+month+" "+ day);
 }

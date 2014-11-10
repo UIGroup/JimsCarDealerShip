@@ -107,7 +107,7 @@ function submitNewCar()
             }
             else
             {
-                alert("New car submittion failed");
+                alert("New car submission failed");
             }
         }
         

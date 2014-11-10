@@ -7,7 +7,7 @@ window.onload = function()
 
 function NewUserSubmit()
 {
-    alert("Congradulations on creating a account");
+    alert("Congratulations on creating an account");
 }
 function signIn()
 {
