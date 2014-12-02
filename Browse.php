@@ -45,9 +45,9 @@
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
           </ul>
-          <form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>
+          <div class="navbar-form navbar-right">
+            <input id="searchBar" type="text" class="form-control" placeholder="Search...">
+          </div>
         </div>
       </div>
     </div>
