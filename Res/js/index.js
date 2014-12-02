@@ -14,7 +14,7 @@ function signIn()
     var email = document.getElementById("email").value;
     if (email == "student@my.utsa.edu")
     {
-        $('#loginArea').html('<label>Welcome Adam!</label><button type="button" class="btn btn-danger" onclick="logout()">Logout</button>');
+        $('#loginArea').html('<label>Welcome!</label><button type="button" class="btn btn-danger" onclick="logout()">Logout</button>');
         isLoggedIn = true;
     }
     else if (email == "jim@jims.com")
@@ -40,7 +40,7 @@ function reserve()
     
     if (isLoggedIn)
     {
-        alert("Adam is scheduled for "+month+" "+ day);
+        alert("You are scheduled for "+month+" "+ day);
     }
     else
     {
