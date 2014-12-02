@@ -16,7 +16,16 @@ function search(){
     var searchString = $("#searchBar").val();
     if(searchString.toUpperCase() === "BLUE FIT")
     {
-        alert("Awesome!");
+        takeOff(2);
+        takeOff(6);
+        takeOff(12);
+        takeOff(13);
+        takeOff(14);
+        takeOff(15);
+        takeOff(16);
+        takeOff(17);
+        takeOff(18);
+        takeOff(19);
     }
 }
 $(function()
